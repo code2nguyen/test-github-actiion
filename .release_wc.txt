@@ -2,3 +2,4 @@
 - [09/22/2021] Request release v2.1.7 by code2nguyen 
 - [09/22/2021] Request release v2.1.8 by code2nguyen 
 - [09/22/2021] Request release v2.1.9 by code2nguyen 
+- [09/22/2021] Request release v2.1.10 by code2nguyen 
