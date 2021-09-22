@@ -1,4 +1,4 @@
-name: Create release Web Component PR
+name: Create release WC PR
 on: 
   workflow_dispatch:
     inputs: 
