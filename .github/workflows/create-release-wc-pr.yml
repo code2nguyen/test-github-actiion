@@ -15,7 +15,7 @@ jobs:
   createReleasePR:
     runs-on: ubuntu-latest
     steps:
-      - name: Clone repository
+      - name: Checkout
         uses: actions/checkout@v2
         with:
           ref: master
@@ -25,15 +25,16 @@ jobs:
           node-version: 15
           registry-url: https://registry.npmjs.org/
       - name: Version up
-        run: npx lerna version ${{ github.event.inputs.release_version }} --no-git-tag-version --no-push --yes --exact
+        run: |
+          npx lerna version ${{ github.event.inputs.release_version }} --no-git-tag-version --no-push --yes --exact
       - name: Update .release_wc.txt file
         run: node ./scripts/update-release-wc-file ${{ github.event.inputs.release_version }} ${{ github.event.sender.login }}
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
-          commit-message: 'chore(release): pre-release'
+          commit-message: 'chore(release-wc): v${{steps.createReleasePR.outputs.release-version }}'
           delete-branch: true
-          branch: release-pr/release
+          branch: release-pr/release-wc-${{steps.createReleasePR.outputs.release-version }}
           branch-suffix: timestamp
-          title: Release Request
+          title: Release Request WC v${{steps.createReleasePR.outputs.release-version }}
           labels: Release PR

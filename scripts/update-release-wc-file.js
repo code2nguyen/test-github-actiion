@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-function updateFile(version) {
+function updateFile(version, byUser) {
   const now = new Date();
 
   fs.appendFileSync(
@@ -10,11 +10,15 @@ function updateFile(version) {
       day: "2-digit",
       month: "2-digit",
       year: "numeric",
-    })}] Request release ${version[0]} by ${version[1]} \r\n`
+    })}] Request release v${version} by ${byUser} \r\n`
   );
 }
 
 if (require.main === module) {
-  var version = process.argv.slice(2);
-  updateFile(version);
+  const version = JSON.parse(
+    fs.readFileSync(path.join(__dirname, "..", "lerna.json"))
+  ).version;
+  var actor = process.argv.slice(2);
+  updateFile(version, actor);
+  console.log(`::set-output name=release-version::${version}`);
 }
