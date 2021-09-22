@@ -1,5 +1,4 @@
 name: Create release Web Component PR
-
 on: 
   workflow_dispatch:
     inputs: 
