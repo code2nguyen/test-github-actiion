@@ -3,8 +3,8 @@ on:
   workflow_dispatch:
     inputs: 
       release_version:
-        description: 'Release version (major | minor | patch | premajor | preminor | prepatch | prerelease)'
-        default: 'patch'
+        description: Release version (major | minor | patch | premajor | preminor | prepatch | prerelease)
+        default: patch
         required: true
 
 permissions:
@@ -16,24 +16,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Clone repository
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
         with:
-          ref: 'master'
-      # - name: Setup node
-      #   uses: actions/setup-node@v2
-      #   with:
-      #     node-version: '15'
-      #     registry-url: https://registry.npmjs.org/
-      # - name: Version up
-      #   run: npx lerna ${{ github.event.inputs.release_version }} --no-git-tag-version --no-push --yes --exact
-      # - name: Update .release_wc.txt file
-      #   run: node ./scripts/update_release_wc_file.js ${{ github.event.inputs.release_version }}
-      # - name: Create Pull Request
-      #   uses: peter-evans/create-pull-request@v3
-      #   with:
-      #     commit-message: 'chore(release): pre-release'
-      #     delete-branch: true
-      #     branch: 'release-pr/release'
-      #     branch-suffix: 'timestamp'
-      #     title: 'Release Request'
-      #     labels: 'Release PR'
+          ref: master
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 15
+          registry-url: https://registry.npmjs.org/
+      - name: Version up
+        run: npx lerna ${{ github.event.inputs.release_version }} --no-git-tag-version --no-push --yes --exact
+      - name: Update .release_wc.txt file
+        run: node ./scripts/update_release_wc_file.js ${{ github.event.inputs.release_version }}
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          commit-message: 'chore(release): pre-release'
+          delete-branch: true
+          branch: release-pr/release
+          branch-suffix: timestamp
+          title: Release Request
+          labels: Release PR
