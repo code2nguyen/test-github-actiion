@@ -67,6 +67,6 @@ jobs:
           prerelease: false
       - name: Publish
         run: |
-          npx lerna publish from-package --yes
+          npx lerna publish1 from-package --yes
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
