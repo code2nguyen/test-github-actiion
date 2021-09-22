@@ -1,12 +1,12 @@
 name: Create release Web Component PR
 
-on: workflow_dispatch:
-  inputs: 
-    release_version:
-      description: 'Release version (major | minor | patch | premajor | preminor | prepatch | prerelease)'
-      default: 'patch'
-      required: true
-
+on: 
+  workflow_dispatch:
+    inputs: 
+      release_version:
+        description: 'Release version (major | minor | patch | premajor | preminor | prepatch | prerelease)'
+        default: 'patch'
+        required: true
 jobs:
   create release PR:
     runs-on: ubuntu-latest
