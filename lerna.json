@@ -1,6 +1,6 @@
 {
   "useWorkspaces": true,
-  "version": "2.1.13",
+  "version": "2.1.14",
   "includeMergedTags": true,
   "command": {
     "publish": {

@@ -2,22 +2,22 @@
 # yarn lockfile v1
 
 
-"@azu/mono-one@2.1.13", "@azu/mono-one@file:/Users/thnguye1/code/github/lerna-monorepo-github-actions-release/packages/mono-one":
+"@azu/mono-one@2.1.14", "@azu/mono-one@file:/Users/thnguye1/code/github/lerna-monorepo-github-actions-release/packages/mono-one":
   "resolved" "file:packages/mono-one"
-  "version" "2.1.13"
+  "version" "2.1.14"
 
 "@azu/mono-three@file:/Users/thnguye1/code/github/lerna-monorepo-github-actions-release/packages/mono-three":
   "resolved" "file:packages/mono-three"
-  "version" "2.1.13"
+  "version" "2.1.14"
   dependencies:
-    "@azu/mono-one" "2.1.12"
-    "@azu/mono-two" "2.1.12"
+    "@azu/mono-one" "2.1.13"
+    "@azu/mono-two" "2.1.13"
 
-"@azu/mono-two@2.1.13", "@azu/mono-two@file:/Users/thnguye1/code/github/lerna-monorepo-github-actions-release/packages/mono-two":
+"@azu/mono-two@2.1.14", "@azu/mono-two@file:/Users/thnguye1/code/github/lerna-monorepo-github-actions-release/packages/mono-two":
   "resolved" "file:packages/mono-two"
-  "version" "2.1.13"
+  "version" "2.1.14"
   dependencies:
-    "@azu/mono-one" "2.1.12"
+    "@azu/mono-one" "2.1.13"
 
 "@evocateur/libnpmaccess@^3.1.2":
   "integrity" "sha512-KSCAHwNWro0CF2ukxufCitT9K5LjL/KuMmNzSu8wuwN2rjyKHD8+cmOsiybK+W5hdnwc5M1SmRlVCaMHQo+3rg=="
