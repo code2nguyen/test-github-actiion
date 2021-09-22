@@ -1,4 +1,4 @@
-# Lerna + monorepo +GitHub Actions Release Flow
+# Lerna + monorepo +GitHub Actions Release Flow test
 
 This repository is an example of monorepo release flow.
 
