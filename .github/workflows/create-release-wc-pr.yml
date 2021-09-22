@@ -37,9 +37,9 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
-          commit-message: 'chore(release-wc): v${{ RELEASE_VERSION }}'
+          commit-message: 'chore(release-wc): v${{ env.RELEASE_VERSION }}'
           delete-branch: true
-          branch: release-pr/release-wc-${{ RELEASE_VERSION }}
+          branch: release-pr/release-wc-${{ env.RELEASE_VERSION }}
           branch-suffix: timestamp
-          title: Release Request WC v${{ RELEASE_VERSION }}
+          title: Release Request WC v${{ env.RELEASE_VERSION }}
           labels: Release PR
