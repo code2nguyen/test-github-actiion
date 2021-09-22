@@ -1,6 +1,6 @@
 {
   "name": "@azu/mono-two",
-  "version": "2.1.14",
+  "version": "2.1.15",
   "description": "",
   "homepage": "https://github.com/azu/lerna-monorepo-github-actions-release/tree/master/packages/mono-two/",
   "bugs": {
@@ -25,7 +25,7 @@
   },
   "scripts": {},
   "dependencies": {
-    "@azu/mono-one": "2.1.14"
+    "@azu/mono-one": "2.1.15"
   },
   "publishConfig": {
     "access": "public"
