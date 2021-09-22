@@ -13,11 +13,9 @@
   },
   "license": "MIT",
   "author": "azu",
-  "workspaces": {
-    "packages": [
-      "packages/*"
-    ]
-  },
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "wc:build": "",
     "versionup": "lerna version --conventional-commits --no-git-tag-version",
