@@ -6,8 +6,13 @@ on:
         description: 'Release version (major | minor | patch | premajor | preminor | prepatch | prerelease)'
         default: 'patch'
         required: true
+
+permissions:
+  contents: write # for checkout and commit
+  pull-requests: write  # for create pr
+
 jobs:
-  create release PR:
+  createReleasePR:
     runs-on: ubuntu-latest
     steps:
       - name: Clone repository
