@@ -26,7 +26,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - name: Version up
         run: |
-          npx lerna version ${{ github.event.inputs.release_version }} --no-git-tag-version --no-push --yes --exact
+          npx lerna version ${{ github.event.inputs.release_version }} --force-publish=* --no-git-tag-version --no-push --yes --exact
           npm install
       - name: Get Release Version
         run: |
