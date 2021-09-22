@@ -19,7 +19,7 @@
     ]
   },
   "scripts": {
-    "build:wc": "",
+    "wc:build": "",
     "versionup": "lerna version --conventional-commits --no-git-tag-version",
     "versionup:patch": "lerna version patch --conventional-commits --no-git-tag-version",
     "versionup:minor": "lerna version minor --conventional-commits --no-git-tag-version",
